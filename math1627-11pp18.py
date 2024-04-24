@@ -36,12 +36,21 @@ def draw_lines(coordinates):
         
         plt.plot(x, y, 'ro-')  # Plotting the lines
 
+import fractions
+from fractions import Fraction
 
 if __name__ == "__main__":
 
     print("What n value would you like to test to? (n>4): ")
     n = int(input())
     print(funct(n))
+
+    result = funct(n)
+    x_value = Fraction(result[0]).limit_denominator()
+    y_value = Fraction(result[1]).limit_denominator()
+
+    print(f"X Value: {x_value}")
+    print(f"Y Value: {y_value}")
 
     draw_square()
 
