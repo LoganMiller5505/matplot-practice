@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     value_list = []
 
-    for i in range(5, n):
+    for i in range(5, n+1):
         draw_lines([funct(i-1), funct(i)])
         value_list.append(funct(i))
 
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     plt.figure()  # Creating a new figure for the second plot
 
-    x_values = list(range(5, n))
+    x_values = list(range(5, n+1))
     y_values_x = [point[0] for point in value_list]
     y_values_y = [point[1] for point in value_list]
 
